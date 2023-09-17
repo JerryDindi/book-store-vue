@@ -95,7 +95,7 @@ class UserController extends Controller
             ])
         );
 
-        session()->flash('message', 'Запись успешно обновлена!');
+        session()->flash('message', 'The entry has been successfully updated!');
 
         return redirect()->route('users.index');
     }

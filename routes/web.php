@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::middleware('auth')
         Route::get('/about', [IndexController::class, 'about'])->name('about');
 
         Route::resource('users', UserController::class);
-        Route::resource('books', BookCOntroller::class);
+        Route::resource('books', BookCOntBooroller::class);
         Route::resource('authors', AuthorController::class);
 });
 
