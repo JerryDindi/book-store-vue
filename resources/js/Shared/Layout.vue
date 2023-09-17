@@ -14,6 +14,12 @@
                         <a :href="route('users.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                             Users
                         </a>
+                        <!-- <a :href="route('authors.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                            Authors
+                        </a>
+                        <a :href="route('books.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                            Books
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -24,7 +30,7 @@
         {{ $page.props.user.email }}
 
         <div>
-            <a @click="logout">Выйти</a>
+            <a @click="logout">Logout</a>
         </div>
     </div>
 

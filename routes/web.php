@@ -23,6 +23,8 @@ Route::middleware('auth')
         Route::get('/about', [IndexController::class, 'about'])->name('about');
 
         Route::resource('users', UserController::class);
+        Route::resource('books', BookCOntroller::class);
+        Route::resource('authors', AuthorController::class);
 });
 
 Route::controller(AuthController::class)

@@ -10,7 +10,7 @@
     </header>
 
     <Link :href="route('users.create')" class="text-indigo-600 hover:text-indigo-900 my-5 block">
-        Добавить пользователя
+        Add a New User
     </Link>
 
 
@@ -22,13 +22,13 @@
                         <thead class="bg-gray-50">
                         <tr>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Имя
+                                Name
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                E-mail
+                                Email
                             </th>
                             <th scope="col" class="relative px-6 py-3">
-                                <span class="sr-only">Действия</span>
+                                <span class="sr-only">Actions</span>
                             </th>
                         </tr>
                         </thead>
@@ -50,10 +50,10 @@
                                 <Link
                                     class="text-indigo-600 hover:text-indigo-900"
                                     :href="route('users.edit', user.id)"
-                                >Редактировать</Link>
+                                >Edit</Link>
 
                                 <a @click="destroy(user.id)" class="text-red-600 hover:text-red-900 cursor-pointer"
-                                >Удалить</a>
+                                >Delete</a>
                             </td>
                         </tr>
                         </tbody>
@@ -63,7 +63,7 @@
                 </div>
 
                 <div v-else class="text-center font-bold text-xl">
-                    Пользователей пока нет
+                    No users yet
                 </div>
             </div>
         </div>
@@ -86,7 +86,7 @@ export default {
     },
     methods: {
         destroy(id) {
-            if(confirm('Вы уверенны?')) {
+            if(confirm('Are you sure?')) {
                 this.$inertia.delete(this.route('users.destroy', id))
             }
         }
