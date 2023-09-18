@@ -8,7 +8,7 @@
     </header>
 
     <Link :href="route('authors.index')" class="text-indigo-600 hover:text-indigo-900 my-5 block">
-        Back to All Author
+        Back to All Authors
     </Link>
 
     <form @submit.prevent="store">
@@ -25,23 +25,16 @@
 
                     <div class="col-span-6">
                         <label class="block text-sm font-medium text-gray-700">Salutation</label>
-                        <input :class="{'border-red-500': form.errors.email}" v-model="form.email" type="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        <input :class="{'border-red-500': form.errors.salutation}" v-model="form.salutation" type="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 
-                        <div class="text-red-500 mt-2" v-if="form.errors.email">{{ form.errors.email }}</div>
+                        <div class="text-red-500 mt-2" v-if="form.errors.salutation">{{ form.errors.salutation }}</div>
                     </div>
 
                     <div class="col-span-6">
                         <label class="block text-sm font-medium text-gray-700">Description</label>
-                        <input :class="{'border-red-500': form.errors.email}" v-model="form.email" type="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        <input :class="{'border-red-500': form.errors.description}" v-model="form.description" type="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
 
-                        <div class="text-red-500 mt-2" v-if="form.errors.email">{{ form.errors.email }}</div>
-                    </div>
-
-                    <div class="col-span-6">
-                        <label class="block text-sm font-medium text-gray-700">Edit</label>
-                        <input :class="{'border-red-500': form.errors.password}" v-model="form.password" type="password" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-
-                        <div class="text-red-500 mt-2" v-if="form.errors.password">{{ form.errors.password }}</div>
+                        <div class="text-red-500 mt-2" v-if="form.errors.description">{{ form.errors.descri[tion] }}</div>
                     </div>
 
                 </div>
@@ -66,8 +59,8 @@ export default {
     setup() {
         const form = useForm({
            name: null,
-           email: null,
-           password: null
+           salutation: null,
+           description: null
         });
 
         function store() {
