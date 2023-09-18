@@ -18,7 +18,7 @@ class AuthorController extends Controller
     {
         return Inertia::render('Authors/Index', [
             'title' => 'Authors',
-            'users' => Author::orderByDesc('created_at')->paginate(5)
+            'authors' => Author::orderByDesc('created_at')->paginate(5)
         ]);
     }
 
@@ -50,7 +50,7 @@ class AuthorController extends Controller
             ])
         );
 
-        return redirect()->route('users.index');
+        return redirect()->route('authors.index');
     }
 
     /**
@@ -74,7 +74,7 @@ class AuthorController extends Controller
     {
         return Inertia::render('Authors/Edit', [
             'title' => 'Authors',
-            'user' => $author,
+            'author' => $author,
         ]);
     }
 

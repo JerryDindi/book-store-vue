@@ -14,10 +14,10 @@
                         <a :href="route('users.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                             Users
                         </a>
-                        <!-- <a :href="route('authors.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <a :href="route('authors.index')" :class="{[activeClass]: isActive('authors')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                             Authors
                         </a>
-                        <a :href="route('books.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      <!--   <a :href="route('books.index')" :class="{[activeClass]: isActive('users')}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                             Books
                         </a> -->
                     </div>
